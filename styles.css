@@ -1,0 +1,49 @@
+header {
+    background-color: black;
+    color: green;
+    text-align: center;
+    padding: 1em;
+}
+
+body {
+    font-family: Times, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+main {
+    padding: 3em;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+}
+
+nav {
+    background-color: black;
+    display: inline-block;
+    clear: both;
+}
+
+section {
+    background-color: black;
+    display: inline-block;
+    clear: both;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    color: green;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
