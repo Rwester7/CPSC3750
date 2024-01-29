@@ -41,7 +41,7 @@ footer {
   padding-right: 3%;
   padding-left: 1%;
   height: 100vh;
-
+  
 
 }
 
@@ -54,7 +54,7 @@ footer {
    padding-right: 3%;
   padding-left: 1%;
   height: 100vh;
-
+      
 }
 
 #content_area {
@@ -88,7 +88,7 @@ h1 {
 }
 
 #left_side li a:hover, #nav li a:active {
-  font-size: 12pt;
+  font-size: 12pt; 
   font-weight: bold;
   padding: 3px 0px 3px 3px;
   color: #ffffff;
@@ -137,4 +137,29 @@ ul.n{
   overflow: hidden;
   background: linear-gradient(to right, orange, purple);
   font-size: 20px;
+}
+
+
+ul.dropdown {
+    display: none;
+    position: absolute;
+}
+
+ul.n li.n:hover ul.dropdown {
+    display: block;
+}
+
+ul.dropdown li {
+    display: block;
+    color: white;
+    background: linear-gradient(to right, orange, purple);
+    text-align: center;
+    padding: 10% 2%;
+    text-decoration: none;
+    width: auto;
+    box-sizing: border-box;
+}
+
+ul.dropdown li:hover {
+    background-color: black;
 }
