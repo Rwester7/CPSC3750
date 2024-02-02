@@ -1,0 +1,102 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Events</title>
+        
+    </head>
+    <body>
+        <ul class="n">
+          <li class="n"><n><a href="http://rwester.com">Homepage</a></n></li>
+          <li class="n"><n><a href="https://github.com/Rwester7/CPSC3750">3750 Repo</a></n></li>
+          <li class="n"><n>
+                <a href="#">Class Assignments</a>
+                <ul class="dropdown">
+                    <li><a href="../demoH.html">Demo Home</a></li>
+                    <li><a href="../Wk3GpAs/GroupCSS2.html"> Week 3 Asg</a></li>
+                    <li><a href="../BasicFluidHybridLayout/layout.html"> Sample Layout Asg</a></li>
+                    <li><a href="../JavascriptEvents/chapter04.html"> Javascript Events</a></li>
+                </ul>
+            </n></li>
+        </ul>
+        
+        <button id="redBtn" onmouseover="reverseColors('redBtn')">RED</button>
+        <button id="greenBtn" onmouseover="reverseColors('greenBtn')">GREEN</button>
+        <button id="blueBtn" onmouseover="reverseColors('blueBtn')">BLUE</button>
+    
+        <div id="redCount"><p>RED count: 0</p></div>
+        <div id="redChgCount"><p>RED Change count: 0</p></div>
+        <br>
+        
+        <div id="greenCount"><p>GREEN count: 0</p></div>
+        <div id="greenChgCount"><p>GREEN Change count: 0</p></div>
+        <br>
+        
+        <div id="blueCount"><p>BLUE count: 0</p></div>
+        <div id="blueChgCount"><p>BLUE Change count: 0</p></div>
+        <br>
+        
+        
+        <script>
+            let redCounter = 0;
+            let greenCounter = 0;
+            let blueCounter = 0;
+            let redChgCount = 0;
+            let greenChgCount = 0;
+            let blueChgCount = 0;
+
+            const redBtn = document.getElementById('redBtn');
+            const greenBtn = document.getElementById('greenBtn');
+            const blueBtn = document.getElementById('blueBtn');
+        
+            const redCount = document.getElementById('redCount');
+            const greenCount = document.getElementById('greenCount');
+            const blueCount = document.getElementById('blueCount');
+            
+            // Changes background color on click
+            redBtn.addEventListener('click', function() {
+              redCounter++;
+              redCount.innerHTML = `<p>RED count: ${redCounter}<p>`;
+              document.body.style.backgroundColor = "red";
+            });
+            
+            greenBtn.addEventListener('click', function() {
+              greenCounter++;
+              greenCount.innerHTML = `<p>GREEN count: ${greenCounter}<p>`;
+              document.body.style.backgroundColor = "green";
+            });
+            
+            blueBtn.addEventListener('click', function() {
+              blueCounter++;
+              blueCount.innerHTML = `<p>BLUE count: ${blueCounter}<p>`;
+              document.body.style.backgroundColor = "blue";
+            });
+            
+            // Reverses colors of button on mouse over
+            function reverseColors(btnId) {
+                const btn = document.getElementById(btnId);
+                // External sheet requires this
+                const computedStyles = window.getComputedStyle(btn);
+                const backColor = computedStyles.backgroundColor;
+                const textColor = computedStyles.color;
+    
+                btn.style.backgroundColor = textColor;
+                btn.style.color = backColor;
+                
+                if(btnId == 'redBtn') {
+                    redChgCount++;
+                    document.getElementById('redChgCount').innerHTML = `<p>Red Change count: ${redChgCount}<p>`;    
+                }
+                else if(btnId == 'greenBtn') {
+                    greenChgCount++;
+                    document.getElementById('greenChgCount').innerHTML = `<p>Green Change count: ${greenChgCount}<p>`;    
+                }
+                else if(btnId == 'blueBtn') {
+                    blueChgCount++;
+                    document.getElementById('blueChgCount').innerHTML = `<p>Blue Change count: ${blueChgCount}<p>`;    
+                }
+                
+            }
+        </script>
+    </body>
