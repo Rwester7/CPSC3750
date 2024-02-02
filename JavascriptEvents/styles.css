@@ -1,0 +1,95 @@
+button {
+    padding: 2%;
+    margin-left: 20%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    }
+
+#redBtn { background-color: black; color: white; }
+#greenBtn { background-color: black; color: white; }
+#blueBtn { background-color: black; color: white; }
+
+p {
+    text-align: center;
+    padding: 0;
+}
+
+
+
+
+header {
+    color: gold;
+    text-align: center;
+    padding: 1em;
+}
+
+body {
+    background: white;
+    font-family: Times, sans-serif;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to right, orange, purple);
+}
+nav {
+    background-color: black;
+    display: inline-block;
+    clear: both;
+}
+ul.n{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #522D80;
+  font-size: 20px;
+}
+
+li.n {
+  float: left;
+}
+
+li n {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+li n:hover {
+  background-color: black;
+}
+
+
+ul.dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+ul.n li.n:hover ul.dropdown {
+    display: block;
+}
+
+ul.dropdown li {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10% 2%;
+    text-decoration: none;
+    width: auto;
+    box-sizing: border-box;
+}
+
+ul.dropdown li:hover {
+    background-color: black;
+}
