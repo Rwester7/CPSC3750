@@ -1,0 +1,104 @@
+form[name="theform"] {
+    text-align: center;
+    padding-top: 10%;
+}
+
+header {
+    color: gold;
+    text-align: center;
+    padding: 1em;
+}
+
+body {
+    background: linear-gradient(to right, lightblue, darkblue);
+    font-family: Times, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+p {
+    color: gold;
+}
+h1 {
+    color: gold;
+}
+
+main {
+    background: linear-gradient(to right, lightblue, darkblue);
+    padding: 3em;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to right, orange, purple);
+}
+nav {
+    background-color: black;
+    display: inline-block;
+    clear: both;
+}
+ul.n{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #522D80;
+  font-size: 20px;
+}
+
+li.n {
+  float: left;
+}
+
+li n {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+li n:hover {
+  background-color: black;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+    margin-right: 10%;
+}
+
+ul.dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+ul.n li.n:hover ul.dropdown {
+    display: block;
+}
+
+ul.dropdown li {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10% 2%;
+    text-decoration: none;
+    width: auto;
+    box-sizing: border-box;
+}
+
+ul.dropdown li:hover {
+    background-color: black;
+}
+

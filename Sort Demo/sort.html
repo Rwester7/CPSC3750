@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="sort.js"></script>
+        <title>Javascript Sort</title>
+        
+    </head>
+    <body>
+        <ul class="n">
+          <li class="n"><n><a href="http://rwester.com">Homepage</a></n></li>
+          <li class="n"><n><a href="https://github.com/Rwester7/CPSC3750">3750 Repo</a></n></li>
+          <li class="n"><n>
+                <a href="#">Class Assignments</a>
+                <ul class="dropdown">
+                    <li><a href="../demoH.html">Demo Home</a></li>
+                    <li><a href="../Wk3GpAs/GroupCSS2.html"> Week 3 Asg</a></li>
+                    <li><a href="../BasicFluidHybridLayout/layout.html"> Sample Layout Asg</a></li>
+                    <li><a href="../JavascriptEvents/chapter04.html"> Javascript Events</a></li>
+                    <li><a href="../BandStore/937529/index.html"> Band Store</a></li>
+                    <li><a href="../HelloPHP/helloworld.php"> Hello PHP</a></li>
+                    <li><a href="../Sort/sort.html"> Sort Demo</a></li>
+                </ul>
+            </n></li>
+        </ul>
+        
+        <!-- Makes input area --> 
+        <form name="theform">
+          <label for="newname">Add Name:</label>
+          <input type="text" id="newname" placeholder="Type name" onkeypress="if(event.key==='Enter'){SortNames(); event.preventDefault();}">
+          
+          <button type="button" onclick="SortNames()">Add and Sort Names</button>
+          <br><br><br><br>
+          
+        <!-- Makes output area --> 
+        <label for="sorted">Sorted Names:</label>
+        <br>
+        <textarea id="sorted" rows="5" cols="30" readonly></textarea>
+        </form>
+    
+    </body>
