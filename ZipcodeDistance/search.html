@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Zip Code Distance Calculator</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder">
+    </div>
+
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("../navbar.html");
+        });
+    </script>
+    <h2>Zip Code Distance Calculator</h2>
+    <form method="post" action="search.php">
+        <label for="zip1">Enter Zip Code 1:</label>
+        <input type="text" id="zip1" name="zip1">
+        <br><br>
+        <label for="zip2">Enter Zip Code 2:</label>
+        <input type="text" id="zip2" name="zip2">
+        <br><br>
+        <input type="checkbox" id="debugCheckbox" onchange="toggleDebug()"> Show Debugging Results
+        <br><br>
+        <button type="submit" name="calculate">Calculate Distance</button>
+    </form>
+    
+    
+    <script>
+    function toggleDebug() {
+        var checkbox = document.getElementById("debugCheckbox");
+        var debugInput = document.createElement("input");
+        debugInput.type = "hidden";
+        debugInput.name = "debug";
+        debugInput.value = checkbox.checked ? "on" : "off";
+        document.querySelector("form").appendChild(debugInput);
+    }
+    </script>
+</body>
+</html>
