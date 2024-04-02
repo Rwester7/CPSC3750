@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Project 2 - Collect Recipes</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <!-- Script for Nav Bar -->
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("../navbar.html");
+        });
+    </script>
+    
+    <div class="projNav-container">
+        Project Directory: 
+        | <a href="/CollectApp/collectApp.html">Home</a> |
+        <a href="/CollectApp/About.html">About Page</a> |
+        <a href="/CollectApp/Stats.html">Stats Page</a> |
+    </div>
+    
+    <br><br>
+    <h2 id="z">Recipe Database</h2>
+    
+    <div class="input-container">
+        <input type="text" id="searchInput" placeholder= "Enter a recipe">
+        <input type="text" id="searchNum" placeholder= "Enter # to return">
+        <label for="cuisineSelect">Select Cuisine:</label>
+            <select id="cuisineSelect">
+                <option value="">None</option>
+                <option value="African">African</option>
+                <option value="Asian">Asian</option>
+                <option value="American">American</option>
+                <option value="British">British</option>
+                <option value="Cajun">Cajun</option>
+                <option value="Caribbean">Caribbean</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Eastern European">Eastern European</option>
+                <option value="European">European</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Greek">Greek</option>
+                <option value="Indian">Indian</option>
+                <option value="Irish">Irish</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Jewish">Jewish</option>
+                <option value="Korean">Korean</option>
+                <option value="Latin American">Latin American</option>
+                <option value="Mediterranean">Mediterranean</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Middle Eastern">Middle Eastern</option>
+                <option value="Nordic">Nordic</option>
+                <option value="Southern">Southern</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Thai">Thai</option>
+                <option value="Vietnamese">Vietnamese</option>
+            </select>
+        <label for="dietSelect">Select Diet:</label>
+            <select id="dietSelect">
+                <option value="">None</option>
+                <option value="GlutenFree">Gluten Free</option>
+                <option value="Ketogenic">Ketogenic</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Pescetarian">Pescetarian</option>
+                <option value="Paleo">Paleo</option>
+            </select>
+        <br>
+        <button id="searchButton">Search</button>    
+    </div>
+    <div id="recipeDetailsContainer"></div>
+    <div id="recipeContainer"></div>
+    <script src="collectApp.js"></script>
+</body>
+</html>
